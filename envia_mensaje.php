@@ -6,7 +6,7 @@
 		
 		$fields = array(
 			'app_id' => "626ad5c9-9de8-4384-a12b-9c3aec240461",
-			'include_player_ids' => array("8f5ece2b-63a8-4af0-a788-bb38f8f6bada"),			
+			'include_player_ids' => array("d1d3ed55-b96e-46e4-ab55-1947f7f8b366"),			
 			//'included_segments' => array('Active Users'),
 			'data' => array("foo" => "bar"),
 			'contents' => $content
