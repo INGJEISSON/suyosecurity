@@ -1,7 +1,7 @@
 <?PHP
 	function sendMessage(){
 		$content = array(
-			"en" => 'Código de doble autenticación es: H435BD'
+			"en" => 'Hola putito de mauricio'
 			);
 		
 		$fields = array(

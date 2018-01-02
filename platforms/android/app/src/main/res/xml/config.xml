@@ -15,6 +15,7 @@
        Ingeniero Jeisson Ibargüen Maturana
     </author>
     <content src="index.html" />
+    <icon src="www/img/logo.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
