@@ -12,7 +12,17 @@
         },
         "onesignal-cordova-plugin": {
             "PACKAGE_NAME": "com.suyosecurity"
+        },
+        "cordova-universal-links-plugin": {
+            "PACKAGE_NAME": "com.suyosecurity"
+        },
+        "cordova-plugin-browsertab": {
+            "PACKAGE_NAME": "com.suyosecurity"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.suyosecurity"
+        }
+    }
 }

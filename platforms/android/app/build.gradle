@@ -92,6 +92,7 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../onesignal-cordova-plugin/suyosecurity-build-extras-onesignal.gradle"
+apply from: "../cordova-plugin-browsertab/suyosecurity-BrowserTab.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -261,6 +262,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
     compile "com.onesignal:OneSignal:3.7.1"
+    compile "com.android.support:customtabs:23.3.0"
     // SUB-PROJECT DEPENDENCIES END
 }
 
