@@ -3,7 +3,7 @@
     <name>Suyo Security</name>
     <preference name="AndroidLaunchMode" value="singleTask" />
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+      Suyo Security (Platform Suyo)
     </description>
     <author email="tecnologia@suyo.io" href="http://platform.suyo.io">
        Ingeniero Jeisson Ibargüen Maturana

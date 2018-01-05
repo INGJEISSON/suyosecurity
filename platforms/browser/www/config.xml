@@ -2,7 +2,7 @@
 <widget id="com.suyosecurity" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Suyo Security</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+      Suyo Security (Platform Suyo)
     </description>
     <author email="tecnologia@suyo.io" href="http://platform.suyo.io">
        Ingeniero Jeisson Ibargüen Maturana
@@ -16,11 +16,5 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <universal-links>
-        <host name="https://uu5j5.app.goo.gl" scheme="https" />
-        <host name="pushsuyosecurity.firebaseapp.com" scheme="https">
-            <path url="/__/auth/callback" />
-        </host>
-    </universal-links>
     <preference name="AndroidLaunchMode" value="singleTask" />
 </widget>
