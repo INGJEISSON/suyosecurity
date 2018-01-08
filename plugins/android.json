@@ -1,27 +1,15 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
-    },
-    "config_munge": {
-        "files": {}
-    },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "onesignal-cordova-plugin": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "cordova-universal-links-plugin": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "cordova-plugin-browsertab": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        }
-    },
-    "dependent_plugins": {}
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.suyosecurity"
+    }
+  },
+  "dependent_plugins": {}
 }

@@ -9,52 +9,11 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "onesignal-cordova-plugin": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "cordova-universal-links-plugin": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.suyosecurity"
-        },
-        "cordova-plugin-browsertab": {
-            "PACKAGE_NAME": "com.suyosecurity"
         }
     },
     "dependent_plugins": {},
-    "modules": [
-        {
-            "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
-            "id": "onesignal-cordova-plugin.OneSignal",
-            "pluginId": "onesignal-cordova-plugin",
-            "clobbers": [
-                "OneSignal"
-            ]
-        },
-        {
-            "file": "plugins/cordova-universal-links-plugin/www/universal_links.js",
-            "id": "cordova-universal-links-plugin.universalLinks",
-            "pluginId": "cordova-universal-links-plugin",
-            "clobbers": [
-                "universalLinks"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-browsertab/www/browsertab.js",
-            "id": "cordova-plugin-browsertab.BrowserTab",
-            "pluginId": "cordova-plugin-browsertab",
-            "clobbers": [
-                "cordova.plugins.browsertab"
-            ]
-        }
-    ],
+    "modules": [],
     "plugin_metadata": {
-        "cordova-plugin-whitelist": "1.3.3",
-        "onesignal-cordova-plugin": "2.2.5",
-        "cordova-universal-links-plugin": "1.2.1",
-        "cordova-plugin-compat": "1.2.0",
-        "cordova-plugin-browsertab": "0.2.0"
+        "cordova-plugin-whitelist": "1.3.3"
     }
 }

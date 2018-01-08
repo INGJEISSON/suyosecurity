@@ -2,17 +2,16 @@
     <head>
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">    
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">      
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js'></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link href="css/style.css" rel="stylesheet">
-<script type="text/javascript" src="cordova.js"></script>     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/index.js"></script>   
-
-    </head>    
-<body>
-<div id="wrapper">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script type="text/javascript" src="cordova.js"></script>
+        <title>Suyo Security</title>
+    </head>
+    <body>
+    <div id="wrapper">
          <div id="page-wrapper">
              <div class="container-fluid">
                     <div class="row">
@@ -64,17 +63,30 @@
                       var token_security=$("#token_security").val();
 
                             if(token_security!=""){
-                              var 
 
-                              var datos='matricular='+1+'&token_security='+token_security;
+                               var model=localStorage.getItem("model");
+                               var platform=localStorage.getItem("platform");
+                               var version=localStorage.getItem("version");
+                               var suyo_key_mb=localStorage.getItem("suyo_key_mb");
+
+                             
+
+                              var datos='matricular='+1+'&token_security='+token_security+'&model='+model+'&platform='+platform+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1+'&version='+version;
                                          
-                                            $.ajax({
+                                           $.ajax({
                                                     type: "POST",
-                                                    url: 'http://127.0.0.1/plataformasuyo/includes/php/modulos/function/devices.php',
+                                                    url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
                                                     data: datos,
                                                     success: function(valor){
-                                                          if(valor==1){
-                                                              parent.location='verifi.html';
+                                                   
+                                                         if(valor=='exito'){
+                                                           // alert("jei");
+                                                            var identi_disposivo=suyo_key_mb;
+
+                                                             localStorage.setItem("key_local_user", identi_disposivo);
+                                                             localStorage.setItem('new_peticion', '1');
+                                                              // alert(localStorage.getItem("key_local_user"));                                                             
+                                                              parent.location='portal.html';
                                                           }else
                                                           alert("No fué posible verificar su identidad, por favor introduzca su correo electrónico y número de telefóno");
 
