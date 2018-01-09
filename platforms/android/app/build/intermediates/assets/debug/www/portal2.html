@@ -1,0 +1,179 @@
+  <html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">      
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js'></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script type="text/javascript" src="cordova.js"></script>
+        <title>Suyo Security</title>
+    </head>
+    <body>
+     <section id="wrapper" id='portal'>
+  <div>
+    <div class="white-box">
+                          <div class="row">
+                             <div class="col-lg-4 col-sm-6 col-xs-12">                                   <!-- .tabs -->
+                            
+                                    <h3 class="box-title">SUYO SECURITY</h3>
+
+                                    <ul class="nav nav-tabs tabs customtab">
+                                          <li class="active tab">
+                                              <a href="#home" data-toggle="tab"><span class="hidden-xs">Solicitudes</span> <span class="badge">5</span> </a>
+                                          </li> 
+                                          <li class="tab">
+                                              <a href="#home" data-toggle="tab"><span class="hidden-xs"> Online </span> <span class="badge">5</span> </a>
+                                          </li>
+                                          <li class="tab">
+                                              <a href="#profile" data-toggle="tab"> <span class="visible-xs"><i class="fa fa-user"></i></span> <span class="hidden-xs">Ver Historial</span> </a>
+                                          </li>                                                      
+                                   </ul><br><br>
+                                     <form class="form-material form-horizontal">
+                                                <div class="form-group" align="center" id='new_peticion'>
+                                                    <label class="col-sm-12">NUEVA SOLICITUD DE DOBLE FACTOR</label>    
+                                                    <div class="col-sm-12">
+                                                        <input class="btn btn-primary" type="button" value="Confirmar" id='confirmar'>
+                                                    </div>
+
+                                                    <div id='deta_solic'>                                                    
+                                                    </div>
+
+
+
+                                                </div>
+
+                                                <div class="form-group" align="center" id='never_peticion'>
+
+                                                    NINGUNA SOLICITUD DE INGRESO ACTUALMENTE 
+
+
+
+                                                   
+                                                </div>
+
+                                        </form>
+                               
+                            </div>
+       
+                      </div>
+             </div>
+        </div>
+  </section>
+        <script>
+            $(document).ready(function(){
+var new_peticion=localStorage.getItem('new_peticion');
+var suyo_key_mb=localStorage.getItem("key_local_user");
+//alert(suyo_key_mb);
+  //  alert(new_peticion);
+
+if(new_peticion==1){
+   $("#new_peticion").show();
+   $("#never_peticion").hide();
+
+}else{
+  $("#new_peticion").hide();
+    $("#never_peticion").show();
+}
+     
+
+              // Consultamos token de seguridad.
+
+              setInterval(refres_estado, 10000);
+
+             function refres_estado(){                
+                 
+
+                    var datos='consultar='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;                   
+
+                        if(new_peticion==0){     
+                                     //   alert("jei2");
+                     
+                                   $.ajax({
+
+                                              type: "POST",
+                                              data: datos,
+                                              url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                              success: function(valor){
+                                               // alert(valor);
+
+                                                    if(valor==1){
+                                                      localStorage.setItem('new_peticion', '1');
+                                                      $("#new_peticion").show();
+                                                       $("#never_peticion").hide();
+
+                                                       var datos2='consultar_det_pet='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                                                         $.ajax({
+
+                                                                type: "POST",
+                                                                data: datos2,
+                                                                url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                                                success: function(valor2){
+                                                                 // alert(valor);
+
+                                                                      if(valor2!=2){
+                                                                        $("#deta_solic").html(valor2);
+
+                                                                      }
+                                                                      else{
+                                                                        alert("no");
+                                                                      }
+
+                                                                }
+                                                            });
+                                                    }
+                                                    else{
+                                                       $("#new_peticion").hide();
+                                                      $("#never_peticion").show();
+                                                    }
+
+                                              }
+                                        });
+                          }
+
+                      
+                  }
+                  
+
+                      $("#confirmar").click(function(){
+
+                            
+                               var datos='confirmar='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                             //  alert(datos);
+
+                                            $.ajax({
+
+                                              type: "POST",
+                                              data: datos,                                             
+                                              //url: 'http://192.168.1.51/plataformasuyo/includes/php/modulos/function/devices.php',
+                                              url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                              success: function(valor){
+                                             //   alert(valor);
+
+                                                    if(valor==1){
+                                                     localStorage.setItem('new_peticion', '0');
+                                                   //   alert("listo");
+
+                                                         $("#new_peticion").hide();
+                                                      $("#never_peticion").show();
+                                                    }
+                                                    else{
+                                                    //  alert("no");
+                                                       $("#new_peticion").show();
+                                                       $("#never_peticion").hide();
+                                                    }                                                   
+
+                                              }
+                                        });
+                                            
+
+
+                      });
+
+           });
+            
+        </script>
+        
+    </body>
+</html>

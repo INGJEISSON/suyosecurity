@@ -16,35 +16,50 @@
 
                        // localStorage.removeItem("key_local_user")
 
-                                     if(localStorage.getItem("key_local_user"))
-                                         parent.location='portal.html';
-                                     else
-                                         parent.location='term_y_condic.html';
+                                     if(localStorage.getItem("key_local_user")){
+                                  
+                                         $("#contenido").toggle();    
+                                             $("#contenido").empty();        
+                                                     $("#contenido").load("portal.html",
+                                                                     function(){ 
+                                                                  $("#contenido").show();
+                                                                                                 
+                                                                     }                              
+                                                     );    
+
+                                                                     
+                                        // parent.location='portal.html';
+                                     }
+                                     else{
+                                       
+                                           $("#contenido").toggle();    
+                                             $("#contenido").empty();        
+                                                     $("#contenido").load("term_y_condic.html",
+                                                                     function(){ 
+                                                                  $("#contenido").show();
+                                                                                                 
+                                                                     }                              
+                                                     );    
+
+                                                                               //  parent.location='term_y_condic.html';
+                                     }
                                
                     });
                      
 
          </script>  
     </head>
-   <div id="wrapper">
-         <div id="page-wrapper">
-             <div class="container-fluid">
-                    <div class="row">
-                             <div class="col-lg-4 col-sm-6 col-xs-12">
-                                <div class="white-box">
-                                    <h3 class="box-title">SUYO SECURITY</h3>
-                                    <ul class="list-inline two-part">
-                                      <p style="justify">Espere por favor ....</p>
-
-                                        <br><br>
-                                        <center><input class="btn btn-primary" type="button" value="Aceptar Términos y Servicios" id='acept_termin'></center>
-                                        
-                                    </ul>
-                                </div>
+<section id="wrapper">
+  <div>
+    <div class="white-box">
+                          <div class="row">
+                             <div class="col-lg-4 col-sm-6 col-xs-12" id='contenido' >                                 
+                                     Espere por favor 
+              
                             </div>
        
                       </div>
              </div>
         </div>
-  </div>
+  </section>
 </html>

@@ -4,10 +4,6 @@
         "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
     },
     {
-        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_icon.png.flat",
-        "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
-    },
-    {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-mdpi_screen.png.flat",
         "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\drawable-port-mdpi\\screen.png"
     },
@@ -38,10 +34,6 @@
     {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-ldpi_screen.png.flat",
         "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\drawable-port-ldpi\\screen.png"
-    },
-    {
-        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_icon.png.flat",
-        "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
     },
     {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi_screen.png.flat",
