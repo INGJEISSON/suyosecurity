@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jan 09 12:22:32 COT 2018
+#Tue Jan 09 12:27:00 COT 2018
 20.base=C\:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 143.base=C\:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 493.base=C\:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\assets\\debug
