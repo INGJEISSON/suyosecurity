@@ -26,10 +26,14 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <platform name="android">
-        <icon density="ldpi" src="www/img/logo.png" />
-        <icon density="mdpi" src="www/img/logo.png" />
-        <icon density="hdpi" src="www/img/logo.png" />
-        <icon density="xhdpi" src="www/img/logo.png" />
+        <splash density="land-hdpi" src="www/img/logo.png" />
+        <splash density="land-ldpi" src="www/img/logo.png" />
+        <splash density="land-mdpi" src="www/img/logo.png" />
+        <splash density="land-xhdpi" src="www/img/logo.png" />
+        <splash density="port-hdpi" src="www/img/logo.png" />
+        <splash density="port-ldpi" src="www/img/logo.png" />
+        <splash density="port-mdpi" src="www/img/logo.png" />
+        <splash density="port-xhdpi" src="www/img/logo.png" />
     </platform>
     <engine name="android" spec="^7.0.0" />
 </widget>
