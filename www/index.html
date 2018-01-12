@@ -1,65 +1,24 @@
 <!DOCTYPE html>
+
 <html>
     <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js'></script>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-<link href="css/style.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <title>Suyo Security</title>
-        <script type="text/javascript" charset="utf-8">
-                    $(document).ready(function(){
-
-                       // localStorage.removeItem("key_local_user")
-
-                                     if(localStorage.getItem("key_local_user")){
-                                  
-                                         $("#contenido").toggle();    
-                                             $("#contenido").empty();        
-                                                     $("#contenido").load("portal.html",
-                                                                     function(){ 
-                                                                  $("#contenido").show();
-                                                                                                 
-                                                                     }                              
-                                                     );    
-
-                                                                     
-                                        // parent.location='portal.html';
-                                     }
-                                     else{
-                                       
-                                           $("#contenido").toggle();    
-                                             $("#contenido").empty();        
-                                                     $("#contenido").load("term_y_condic.html",
-                                                                     function(){ 
-                                                                  $("#contenido").show();
-                                                                                                 
-                                                                     }                              
-                                                     );    
-
-                                                                               //  parent.location='term_y_condic.html';
-                                     }
-                               
-                    });
-                     
-
-         </script>  
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World</title>
     </head>
-<section id="wrapper">
-  <div>
-    <div class="white-box">
-                          <div class="row">
-                             <div class="col-lg-4 col-sm-6 col-xs-12" id='contenido' >                                 
-                                     Espere por favor 
-              
-                            </div>
-       
-                      </div>
-             </div>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
         </div>
-  </section>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/push.js"></script>
+    </body>
 </html>

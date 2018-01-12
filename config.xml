@@ -1,16 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.suyosecurity" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Suyo Security</name>
+<widget id="com.suyo_security" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Suyo</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Ingeniero Jeisson IBargüen Maturana
+        Apache Cordova Team
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <icon src="www/img/logo.png" />
-    <preference name="Orientation" value="portrait" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -25,15 +23,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <platform name="android">
-        <splash density="land-hdpi" src="www/img/logo.png" />
-        <splash density="land-ldpi" src="www/img/logo.png" />
-        <splash density="land-mdpi" src="www/img/logo.png" />
-        <splash density="land-xhdpi" src="www/img/logo.png" />
-        <splash density="port-hdpi" src="www/img/logo.png" />
-        <splash density="port-ldpi" src="www/img/logo.png" />
-        <splash density="port-mdpi" src="www/img/logo.png" />
-        <splash density="port-xhdpi" src="www/img/logo.png" />
-    </platform>
+    <plugin name="onesignal-cordova-plugin" spec="^2.2.5" />
     <engine name="android" spec="^7.0.0" />
 </widget>

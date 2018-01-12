@@ -7,8 +7,11 @@
     "files": {}
   },
   "installed_plugins": {
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.suyo_security"
+    },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.suyosecurity"
+      "PACKAGE_NAME": "com.suyo_security"
     }
   },
   "dependent_plugins": {}
