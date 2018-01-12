@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jan 12 15:20:00 COT 2018
+#Fri Jan 12 15:28:42 COT 2018
 122.file=C\:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\xml\\config.xml
 60.set=ANDROID_RESOURCE
 129.file=C\:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\cordova-js-src\\exec.js
