@@ -1,0 +1,164 @@
+
+                                                <div class="form-group" align="center" id='new_peticion'>
+                                                    <label class="col-sm-12">NUEVA SOLICITUD DE DOBLE FACTOR</label>    
+                                                    <div class="col-sm-12">
+                                                        <input class="btn btn-primary" type="button" value="Confirmar" id='confirmar'>
+                                                    </div>
+
+                                                    <div id='deta_solic'>                                                    
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" align="center" id='never_peticion'>
+                                                    NINGUNA SOLICITUD DE INGRESO ACTUALMENTE  
+                                                </div>
+<script>
+            $(document).ready(function(){
+var new_peticion=localStorage.getItem('new_peticion');
+var suyo_key_mb=localStorage.getItem("key_local_user");
+
+if(new_peticion==1){
+   
+                    var datos='consultar='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                        //if(new_peticion==0){     
+                                   $.ajax({
+
+                                              type: "POST",
+                                              data: datos,
+                                              url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                              success: function(valor){
+                                           
+
+                                                    if(valor==1){
+                                                      localStorage.setItem('new_peticion', 1);
+                                                      $("#new_peticion").show();
+                                                       $("#never_peticion").hide();
+
+                                                       var datos2='consultar_det_pet='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                                                         $.ajax({
+
+                                                                type: "POST",
+                                                                data: datos2,
+                                                                url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                                                success: function(valor2){
+                                                                 // alert(valor);
+
+                                                                      if(valor2!=2){
+                                                                        $("#deta_solic").html(valor2);
+
+                                                                      }
+                                                                      else{
+                                                                      
+                                                                      }
+
+                                                                }
+                                                            });
+                                                    }
+                                                    else{
+                                                       $("#new_peticion").hide();
+                                                      $("#never_peticion").show();
+                                                    }
+
+                                              }
+                                        });
+                         // }
+
+}else{
+  $("#new_peticion").hide();
+    $("#never_peticion").show();
+}
+     
+
+              // Consultamos token de seguridad.
+
+              setInterval(refres_estado, 10000);
+
+             function refres_estado(){                
+                 
+
+                    var datos='consultar='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                        //if(new_peticion==0){     
+                                   $.ajax({
+
+                                              type: "POST",
+                                              data: datos,
+                                              url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                              success: function(valor){
+                                           
+
+                                                    if(valor==1){
+                                                      localStorage.setItem('new_peticion', 1);
+                                                      $("#new_peticion").show();
+                                                       $("#never_peticion").hide();
+
+                                                       var datos2='consultar_det_pet='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                                                         $.ajax({
+
+                                                                type: "POST",
+                                                                data: datos2,
+                                                                url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                                                success: function(valor2){
+                                                                 // alert(valor);
+
+                                                                      if(valor2!=2){
+                                                                        $("#deta_solic").html(valor2);
+
+                                                                      }
+                                                                      else{
+                                                                      
+                                                                      }
+
+                                                                }
+                                                            });
+                                                    }
+                                                    else{
+                                                       $("#new_peticion").hide();
+                                                      $("#never_peticion").show();
+                                                    }
+
+                                              }
+                                        });
+                         // }
+
+                      
+                  }
+                  
+
+                      $("#confirmar").click(function(){
+
+                            
+                               var datos='confirmar='+1+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1;
+                             //  alert(datos);
+
+                                            $.ajax({
+
+                                              type: "POST",
+                                              data: datos,                                             
+                                              //url: 'http://192.168.1.51/plataformasuyo/includes/php/modulos/function/devices.php',
+                                              url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                              success: function(valor){
+                                             //   alert(valor);
+
+                                                    if(valor==1){
+                                                     localStorage.setItem('new_peticion', 0);
+                                                   //   alert("listo");
+
+                                                         $("#new_peticion").hide();
+                                                      $("#never_peticion").show();
+                                                    }
+                                                    else{
+                                                    //  alert("no");
+                                                       $("#new_peticion").show();
+                                                       $("#never_peticion").hide();
+                                                    }                                                   
+
+                                              }
+                                        });
+                                            
+
+
+                      });
+
+           });
+            
+        </script>

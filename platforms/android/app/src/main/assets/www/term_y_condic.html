@@ -1,0 +1,36 @@
+        <script type="text/javascript" charset="utf-8">
+                    $(document).ready(function(){
+
+                        //if(localStorage.getItem("key_local_user"))
+                       // parent.location='portal.html';
+
+                                $("#acept_termin").click(function(){
+                                
+                                       $("#contenido").toggle();    
+                                             $("#contenido").empty();        
+                                                     $("#contenido").load("register.html",
+                                                                     function(){ 
+                                                                  $("#contenido").show();
+                                                                                                 
+                                                                     }                              
+                                                     );    
+
+                                         //  parent.location='register.html';
+                                });
+                    });
+                     
+
+         </script>  
+    </head>
+
+                            
+                                    <h3 class="box-title">SUYO SECURITY</h3>
+                                    <ul class="list-inline two-part">
+                                      <p style="justify">La presente aplicación complementa la seguridad de la plataforma de Suyo Colombia SAS.
+Por medio de este programa el sistema realiza una doble autenticación de su identidad, para proteger de manera efectiva la información de nuestros clientes. Al dispositivo celular que asocie mediante ésta aplicación, llegará un código de seguridad(token) que debe ingresar al acceder la plataforma de Suyo. En caso de pérdida o inhabilidad de usar su celular, debe buscar a su coordinador para que active una acceso temporal al sistema.</p>
+                                        <br>
+                                        <center><input class="btn btn-primary" type="button" value="Aceptar Términos y Servicios" id='acept_termin'></center>
+                                        
+                                    </ul>
+                           
+</html>

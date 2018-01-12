@@ -1,0 +1,94 @@
+
+
+                                    <h3 class="box-title">SUYO SECURITY</h3>
+                                    <ul class="list-inline two-part">
+                                        <br>
+                                        <p style='justify'>Por favor ingrese el token de seguridad que fué enviado a su número de celular.</p> <br><br>
+                                         <form class="form-material form-horizontal">
+                                                <div class="form-group" align="center">
+                                                    <label class="col-sm-12">TOKEN</label>
+                                                    <div class="col-sm-12">
+                                                        <input class="form-control" type="number" id='token_security'>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group" align="center">                       
+                                                    <div class="col-sm-12">
+                                                        <input class="btn btn-primary" type="button" value="Verificar" id='verificar'>
+                                                    </div>                                                   
+                                                </div>
+
+                                                <div class="form-group">                       
+                                                    <div class="col-sm-12" id='msg'>
+
+                                                    </div>                                                   
+                                                </div>
+
+
+                                        </form>
+
+                                    </ul>
+        <script>
+            $(document).ready(function(){
+
+               $("#token_security").focus();
+
+                 $("#verificar").click(function(){
+                     
+
+                      var token_security=$("#token_security").val();
+
+                            if(token_security!=""){
+
+                               var model=localStorage.getItem("model");
+                               var platform=localStorage.getItem("platform");
+                               var version=localStorage.getItem("version");
+                               var suyo_key_mb=localStorage.getItem("suyo_key_mb");
+
+                             
+
+                              var datos='matricular='+1+'&token_security='+token_security+'&model='+model+'&platform='+platform+'&suyo_key_mb='+suyo_key_mb+'&regisid='+1+'&version='+version;
+                                         
+                                           $.ajax({
+                                                    type: "POST",
+                                                    url: 'http://platform.suyo.io/includes/php/modulos/function/devices.php',
+                                                    data: datos,
+                                                    success: function(valor){
+                                                   
+                                                         if(valor=='exito'){
+                                                           // alert("jei");
+                                                            var identi_disposivo=suyo_key_mb;
+
+                                                             localStorage.setItem("key_local_user", identi_disposivo);
+                                                             localStorage.setItem('new_peticion', '1');
+                                                              // alert(localStorage.getItem("key_local_user"));                                                             
+                                                             // parent.location='portal.html';
+
+                                                               $("#contenido").toggle();    
+                                                                   $("#contenido").empty();        
+                                                                           $("#contenido").load("portal.html",
+                                                                                           function(){ 
+                                                                                        $("#contenido").show();
+                                                                                                                       
+                                                                                           }                              
+                                                                           );    
+                                                          }else
+                                                          alert("No fué posible verificar su identidad, por favor introduzca su correo electrónico y número de telefóno");
+
+                                                    }
+                                            });
+
+
+                            }
+                            else{
+                               $("#token_security").focus();
+                              $("#msg").html("Por favor introduzca su token de seguridad").class('btn btn-primary');
+
+                            }
+                                      
+                });
+
+           });
+            
+        </script>
+</html>
