@@ -56,16 +56,16 @@
         "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
     },
     {
-        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\58d63e925a525654f3769d2bf1f0478c\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\ac1189e3490b887334519b5ea922207b\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\raw_consumer_onesignal_keep.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\OneSignal-3.7.1.aar\\397dd169b40f08c1e6fee717b04e01ed\\res\\raw\\consumer_onesignal_keep.xml"
     },
     {
-        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\ac1189e3490b887334519b5ea922207b\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\58d63e925a525654f3769d2bf1f0478c\\res\\layout\\notification_template_media_custom.xml"
     },
     {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxhdpi_screen.png.flat",
@@ -84,12 +84,12 @@
         "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
     },
     {
-        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9c22039958420dcc0af6562bae4f405e\\res\\layout-v21\\notification_action.xml"
-    },
-    {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9c22039958420dcc0af6562bae4f405e\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9c22039958420dcc0af6562bae4f405e\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -132,12 +132,12 @@
         "source": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\src\\main\\res\\drawable-port-mdpi\\screen.png"
     },
     {
-        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\ac1189e3490b887334519b5ea922207b\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
-    },
-    {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\ac1189e3490b887334519b5ea922207b\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\ac1189e3490b887334519b5ea922207b\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "C:\\xampp2\\htdocs\\suyosecurity\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",

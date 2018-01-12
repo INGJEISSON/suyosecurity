@@ -7,7 +7,7 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>Suyo</name>
+    <name>Suyo Security</name>
     <description>
        Suyo Security
     </description>
